@@ -1,0 +1,36 @@
+{
+  "name": "@serianox/openmds",
+  "version": "0.1.0",
+  "description": "Hello World with npm/typescript ",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.ts.d",
+  "scripts": {
+    "build": "npm run make -- build",
+    "test": "npm run make -- test",
+    "make": "make -j"
+  },
+  "keywords": [],
+  "author": "Thomas Duboucher <thomas@duboucher.eu> (https://duboucher.eu/)",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serianox/openmds.git"
+  },
+  "bugs": {
+    "url": "https://github.com/serianox/openmds/issues"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "codecov": "^2.3.0",
+    "dedent-js": "^1.0.1",
+    "mocha": "^3.5.1",
+    "nyc": "^11.2.1",
+    "source-map-support": "^0.5.0",
+    "tslint": "^5.7.0",
+    "typedoc": "^0.8.0",
+    "typescript": "^2.5.2",
+    "typescript-formatter": "^6.0.0"
+  }
+}

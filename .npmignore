@@ -1,0 +1,10 @@
+coverage
+doc
+.gitignore
+lib
+node_modules
+.nyc_output
+test
+.travis.yml
+tsconfig.json
+tslint.json
