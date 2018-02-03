@@ -1,6 +1,6 @@
 .PHONY: default
 default:
-	yarn run make commit && ./dist/bin/openmds
+	yarn run make build && ./dist/bin/openmds -p 8080
 
 .PHONY: ci
 ci: lint style build test cov-cli codecov doc

@@ -34,7 +34,9 @@
     "typescript-formatter": "^6.0.0"
   },
   "dependencies": {
+    "@types/commander": "^2.12.2",
     "@types/hapi": "^16.1.12",
+    "commander": "^2.13.0",
     "hapi": "^16.6.2"
   }
 }

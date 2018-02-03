@@ -1,19 +1,21 @@
 import * as Hapi from "hapi";
 
-const app = new Hapi.Server();
+export const startServer = (host?: string, port?: number) => {
+    const app = new Hapi.Server();
 
-app.connection({ port: 8080, host: "localhost", routes: { cors: true } });
+    app.connection({ port: port || 3000, host: host || "localhost", routes: { cors: true } });
 
-app.route({
-    method: "GET",
-    path: "/",
-    handler: (request, reply) => reply("Hello, world!")
-});
+    app.route({
+        method: "GET",
+        path: "/",
+        handler: (request, reply) => reply("Hello, world!"),
+    });
 
-app.start(error => {
-    if (error) {
-        throw error;
-    }
+    app.start(error => {
+        if (error) {
+            throw error;
+        }
 
-    console.log(`Server running at: ${app.info!.uri}`);
-});
+        console.log(`Server running at: ${app.info!.uri}`);
+    });
+};
