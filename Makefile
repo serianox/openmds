@@ -1,7 +1,10 @@
+.PHONY: default
+default:
+	yarn run make commit
+
 .PHONY: ci
 ci: lint style build test cov-cli codecov doc
 
-.DEFAULT_GOAL := commit
 .PHONY: commit
 commit: lint build test cov-cli cov-html doc
 
@@ -23,6 +26,7 @@ test: build
 
 .PHONY: build
 build: transpile
+	cp -rpu bin dist
 
 .PHONY: transpile
 transpile:
