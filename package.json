@@ -32,5 +32,9 @@
     "typedoc": "^0.8.0",
     "typescript": "^2.5.2",
     "typescript-formatter": "^6.0.0"
+  },
+  "dependencies": {
+    "@types/hapi": "^16.1.12",
+    "hapi": "^16.6.2"
   }
 }

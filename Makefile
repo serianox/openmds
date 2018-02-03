@@ -1,6 +1,6 @@
 .PHONY: default
 default:
-	yarn run make commit
+	yarn run make commit && ./dist/bin/openmds
 
 .PHONY: ci
 ci: lint style build test cov-cli codecov doc
@@ -26,7 +26,7 @@ test: build
 
 .PHONY: build
 build: transpile
-	cp -rpu bin dist
+	cp -rpu ./bin ./dist
 
 .PHONY: transpile
 transpile:
