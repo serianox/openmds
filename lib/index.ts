@@ -2,7 +2,13 @@ import * as Hapi from "hapi";
 
 const app = new Hapi.Server();
 
-app.connection({ port: 3000, host: "localhost", routes: { cors: true } });
+app.connection({ port: 8080, host: "localhost", routes: { cors: true } });
+
+app.route({
+    method: "GET",
+    path: "/",
+    handler: (request, reply) => reply("Hello, world!")
+});
 
 app.start(error => {
     if (error) {

@@ -14,6 +14,7 @@
                 "alphabetize": false
             }
         ],
+        "object-literal-sort-keys": false,
         "typedef": false
     },
     "rulesDirectory": []
